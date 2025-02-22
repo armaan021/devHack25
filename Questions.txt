@@ -1,0 +1,9 @@
+What is the lenght of your password?
+Does your password contains your name?
+Does your password contain your date of birth?
+Does your password contain your Hometown?
+How many Upper letters in your password?
+How many special characters in your password?
+How many numbers in your password?
+Are there any repeating characters in your password?
+Does your password contain any famous landmark?
