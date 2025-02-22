@@ -1,9 +1,20 @@
-What is the lenght of your password?
+What is the length of your password?
 Does your password contains your name?
 Does your password contain your date of birth?
 Does your password contain your Hometown?
-How many Upper letters in your password?
+How many upper letters in your password if any ?
 How many special characters in your password?
 How many numbers in your password?
 Are there any repeating characters in your password?
 Does your password contain any famous landmark?
+Is your password a TV/Anime/Movie character?
+Does your password contain keyboard patterns (e.g., "123456", "qwerty", "asdfgh")?
+Is your password based on a fictional place (e.g., Hogwarts, Gotham)?
+Is your password a simple phrase (e.g., "Iloveyou", "letmein")?
+Is your password fewer than 12 characters long?
+Does your password contain a sports team name?
+Does your password contain your favorite celebrity's name?
+Does your password include a birth year (e.g., "1999", "2000")?
+Does your password contain your university name?
+is your password in english?
+Are you Sane?
