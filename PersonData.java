@@ -4,14 +4,12 @@ public class PersonData {
     private String lastName;
     private String firstName;
     private String preferredName;
-    private String dob;
     private String hometown;
 
-    public PersonData(String first, String last, String preferred, String dob, String hometown) {
+    public PersonData(String first, String last, String preferred, String hometown) {
         this.firstName = first;
         this.lastName = last;
         this.preferredName = preferred;
-        this.dob = dob;
         this.hometown = hometown;
     }
 
@@ -25,10 +23,6 @@ public class PersonData {
 
     public String getPreferredName() {
         return this.preferredName;
-    }
-
-    public String getDOB() {
-        return this.dob;
     }
 
     public String getHometowm() {

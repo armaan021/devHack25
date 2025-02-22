@@ -21,12 +21,10 @@ public class Main {
             String firstName = scnr.nextLine();
             System.out.print("Enter your preferred name: ");
             String preferredName = scnr.nextLine();
-            System.out.print("Enter your Date of Birth(YYYY-MM-DD): ");
-            String dob = scnr.nextLine();
             System.out.print("Enter your Hometown: ");
             String hometown = scnr.nextLine();
 
-            PersonData person = new PersonData(firstName, lastName, preferredName, dob, hometown);
+            PersonData person = new PersonData(firstName, lastName, preferredName, hometown);
             PasswordHacker hacker = new PasswordHacker(person);
             
             Password pass;
@@ -137,7 +135,7 @@ public class Main {
 
             System.out.println(questions.get(4));
             if (containsName(scnr) == 1) {
-                  
+
             }
       }
 
