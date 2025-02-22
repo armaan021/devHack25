@@ -24,10 +24,6 @@ public class Question {
       }
       return (questions);
    }
-
-   public void testPasswordStrength() {
-      
-   }
 }
    
     

@@ -21,15 +21,10 @@ public class Main {
             String firstName = scnr.nextLine();
             System.out.print("Enter your preferred name: ");
             String preferredName = scnr.nextLine();
-            System.out.print("Enter your Hometown: ");
-            String hometown = scnr.nextLine();
 
-            PersonData person = new PersonData(firstName, lastName, preferredName, hometown);
+            PersonData person = new PersonData(firstName, lastName, preferredName);
             PasswordHacker hacker = new PasswordHacker(person);
-            
-            Password pass;
-            boolean valid = true;
-            
+            Password pass;            
 
             do {
                   System.out.print("Enter your password: ");
@@ -60,91 +55,147 @@ public class Main {
             for(int i = 0; i < num; i++){
                   CRACKED  += "*";
             }
-            
-            testPassword.testPasswordStrength(pass, "10k-most-common");
-            System.out.println("Password cracked: " + CRACKED);
 
             System.out.println(questions.get(1));
-            if (containsName(scnr) == 1) {
-                  if (pass.getPassword().indexOf(firstName) != -1) {
-                        String updateCracked = "";
-                        String testCurr = person.getFirstName();
-                          for (int j = 0; j < Main.CRACKED.length(); j++) {
-                              if (Main.CRACKED.charAt(j) == '*') {
-                                  if (j == pass.getPassword().indexOf(testCurr)) {
-                                      updateCracked += testCurr;
-                                      j += testCurr.length() - 1;
-                                  } else {
-                                      updateCracked += "*";
-                                  }
-                              } else {
-                                  updateCracked += Main.CRACKED.charAt(j);
-                              }
-                          }
-                          Main.CRACKED = updateCracked;
-                  }
-            }
-            System.out.println("Password cracked: " + CRACKED);
+            int containsFirstName = containsName(scnr);
+            // if (containsFirstName == 1) {
+            //       if (pass.getPassword().indexOf(firstName) != -1) {
+            //             String updateCracked = "";
+            //             String testCurr = person.getFirstName();
+            //               for (int j = 0; j < Main.CRACKED.length(); j++) {
+            //                   if (Main.CRACKED.charAt(j) == '*') {
+            //                       if (j == pass.getPassword().indexOf(testCurr)) {
+            //                           updateCracked += testCurr;
+            //                           j += testCurr.length() - 1;
+            //                       } else {
+            //                           updateCracked += "*";
+            //                       }
+            //                   } else {
+            //                       updateCracked += Main.CRACKED.charAt(j);
+            //                   }
+            //               }
+            //               Main.CRACKED = updateCracked;
+            //       }
+            // }
+            // System.out.println("Password cracked: " + CRACKED);
             
             
             System.out.println(questions.get(2));
-            if (containsName(scnr) == 1) {
-                  if (pass.getPassword().indexOf(lastName) != -1) {
-                        String updateCracked = "";
-                        String testCurr = person.getLastName();
-                          for (int j = 0; j < Main.CRACKED.length(); j++) {
-                              if (Main.CRACKED.charAt(j) == '*') {
-                                  if (j == pass.getPassword().indexOf(testCurr)) {
-                                      updateCracked += testCurr;
-                                      j += testCurr.length() - 1;
-                                  } else {
-                                      updateCracked += "*";
-                                  }
-                              } else {
-                                  updateCracked += Main.CRACKED.charAt(j);
-                              }
-                          }
-                          Main.CRACKED = updateCracked;
-                  }
-            }
-            System.out.println("Password cracked: " + CRACKED);
+            int containsLastName = containsName(scnr);
+            // if (containsLastName == 1) {
+            //       if (pass.getPassword().indexOf(lastName) != -1) {
+            //             String updateCracked = "";
+            //             String testCurr = person.getLastName();
+            //               for (int j = 0; j < Main.CRACKED.length(); j++) {
+            //                   if (Main.CRACKED.charAt(j) == '*') {
+            //                       if (j == pass.getPassword().indexOf(testCurr)) {
+            //                           updateCracked += testCurr;
+            //                           j += testCurr.length() - 1;
+            //                       } else {
+            //                           updateCracked += "*";
+            //                       }
+            //                   } else {
+            //                       updateCracked += Main.CRACKED.charAt(j);
+            //                   }
+            //               }
+            //               Main.CRACKED = updateCracked;
+            //       }
+            // }
+            // System.out.println("Password cracked: " + CRACKED);
             
             
             System.out.println(questions.get(3));
-            if (containsName(scnr) == 1) {
-                  if (pass.getPassword().indexOf(preferredName) != -1) {
-                        String updateCracked = "";
-                        String testCurr = person.getPreferredName();
-                          for (int j = 0; j < Main.CRACKED.length(); j++) {
-                              if (Main.CRACKED.charAt(j) == '*') {
-                                  if (j == pass.getPassword().indexOf(testCurr)) {
-                                      updateCracked += testCurr;
-                                      j += testCurr.length() - 1;
-                                  } else {
-                                      updateCracked += "*";
-                                  }
-                              } else {
-                                  updateCracked += Main.CRACKED.charAt(j);
-                              }
-                          }
-                          Main.CRACKED = updateCracked;
-                  }
-            }
-            System.out.println("Password cracked: " + CRACKED);
+            int containsPreferredName = containsName(scnr);
+            // if (containsPreferredName == 1) {
+            //       if (pass.getPassword().indexOf(preferredName) != -1) {
+            //             String updateCracked = "";
+            //             String testCurr = person.getPreferredName();
+            //               for (int j = 0; j < Main.CRACKED.length(); j++) {
+            //                   if (Main.CRACKED.charAt(j) == '*') {
+            //                       if (j == pass.getPassword().indexOf(testCurr)) {
+            //                           updateCracked += testCurr;
+            //                           j += testCurr.length() - 1;
+            //                       } else {
+            //                           updateCracked += "*";
+            //                       }
+            //                   } else {
+            //                       updateCracked += Main.CRACKED.charAt(j);
+            //                   }
+            //               }
+            //               Main.CRACKED = updateCracked;
+            //       }
+            // }
+            // System.out.println("Password cracked: " + CRACKED);
 
 
             System.out.println(questions.get(4));
             if (containsName(scnr) == 1) {
-
+                  testPassword.testPasswordStrengthInt(pass);
+                  System.out.println("Password cracked: " + CRACKED);
             }
+            
+            System.out.println(questions.get(5));
+            if (containsName(scnr) == 1) {
+                  testPassword.testPasswordStrengthSC(pass);
+                  System.out.println("Password cracked: " + CRACKED);
+            }
+            
+            System.out.println(questions.get(6));
+            if (containsName(scnr) == 1) {
+                  if (containsFirstName == 1 || containsLastName == 1) {
+                        testPassword.testPasswordStrength(pass, "./PersonalPasswordDataList/personalPasswordPossibilities_" + person.getFirstName() + "_" + person.getLastName());
+                        testPassword.testPasswordStrength(pass, "./PersonalPasswordDataList/personalPasswordPossibilities_" + person.getFirstName());
+                        testPassword.testPasswordStrength(pass, "./PersonalPasswordDataList/personalPasswordPossibilities_" + person.getLastName());
+                        System.out.println("Password cracked: " + CRACKED);
+                  }
+                  if (containsPreferredName == 1) {
+                        testPassword.testPasswordStrength(pass, "./PersonalPasswordDataList/personalPasswordPossibilities_" + person.getPreferredName());
+                        System.out.println("Password cracked: " + CRACKED);
+                  }
+            }
+            
+            if (foundPassword()) {
+                  System.out.println("Password cracked: " + CRACKED);
+            } else {
+                  System.out.println(questions.get(7));
+                  containsName(scnr);  
+            }          
+            
+            if (foundPassword()) {
+                  System.out.println("Password cracked: " + CRACKED);
+            } else {
+                  System.out.println(questions.get(8));
+                  containsName(scnr);   
+            }               
+            
+            if (foundPassword()) {
+                  System.out.println("Password cracked: " + CRACKED);
+            } else {
+                  System.out.println(questions.get(9));
+                  containsName(scnr);   
+            }          
+            
+            if (foundPassword()) {
+                  System.out.println("Password cracked: " + CRACKED);
+            } else {
+                  System.out.println(questions.get(10));
+                  containsName(scnr);   
+            }          
+            
+            if (foundPassword()) {
+                  System.out.println("Password cracked: " + CRACKED);
+            } else {
+                  System.out.println(questions.get(11));
+                  containsName(scnr);   
+            }          
+
+            System.out.println("Looking for password in our common passwords list...");
+            testPassword.testPasswordStrength(pass, "10k-most-common");
+            if (foundPassword()) {
+                  System.out.println("Password cracked: " + CRACKED);
+            } 
+            
       }
-
-
-
-
-
-
-
 
       public static int validIntLength(Scanner scnr){
             String input;
@@ -179,7 +230,17 @@ public class Main {
             }
             return num; 
       }
-      
+
+      public static boolean foundPassword() {
+            boolean found = true;
+
+            for (int i = 0; i < CRACKED.length() && found; i++) {
+                  if (CRACKED.charAt(i) == '*') {
+                        found = false;
+                  }
+            }
+            return found;
+      }  
 }
 
 

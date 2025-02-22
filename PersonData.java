@@ -4,13 +4,11 @@ public class PersonData {
     private String lastName;
     private String firstName;
     private String preferredName;
-    private String hometown;
 
-    public PersonData(String first, String last, String preferred, String hometown) {
+    public PersonData(String first, String last, String preferred) {
         this.firstName = first;
         this.lastName = last;
         this.preferredName = preferred;
-        this.hometown = hometown;
     }
 
     public String getFirstName() {
@@ -24,11 +22,7 @@ public class PersonData {
     public String getPreferredName() {
         return this.preferredName;
     }
-
-    public String getHometowm() {
-        return this.hometown;
-    }
-
+    
     public void generatePossiblePasswords() {
         try {
             FileWriter fw = new FileWriter("personalPasswords.txt");

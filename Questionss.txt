@@ -1,18 +1,12 @@
 What is the length of your password?
-Does your password contains your first name? 
-Does your password contains your last name? 
-Does your password contains your preferred name? 
-How many numbers in your password? 
-Does your password contain your Hometown? 
-How many upper letters in your password if any? 
-How many special characters in your password? 
-Are there any repeating characters in your password? 
-Is your password a TV/Anime/Movie character? 
+Does your password contains any part of your first name? 
+Does your password contains any part of your last name? 
+Does your password contains any part of your preferred name? 
+Are there any numbers in your password? 
+Are there any special characters in your password? 
+Are there any upper case letters? 
 Does your password contain the name of a family member? 
 Does your password contain keyboard patterns (e.g., "123456", "qwerty", "asdfgh")? 
 Is your password based on a fictional place (e.g., Hogwarts, Gotham)? 
-Is your password fewer than 12 characters long?
-Does your password contain your favorite celebrity's name? 
-Does your password contain your school/university name? 
 Is your password in english? 
 Are you sane? 

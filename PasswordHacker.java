@@ -8,7 +8,6 @@ public class PasswordHacker {
         this.person = person;
         generatePossiblePasswords(this.person.getFirstName());
         generatePossiblePasswords(this.person.getLastName());
-        generatePossiblePasswords(this.person.getHometowm());
         generatePossiblePasswords(this.person.getPreferredName());
         generatePossiblePasswordsString(this.person.getFirstName(), this.person.getLastName());
     }
@@ -50,7 +49,28 @@ public class PasswordHacker {
             
             scnr.close();
         } catch (IOException ioe) {
-
+            
+        }
+        return result;
+    }
+    
+    public static String readFile(String filename, int len) {
+        String result = "";
+        try {
+            FileReader fw = new FileReader(filename + ".txt");
+            Scanner scnr = new Scanner(fw);
+            
+            String line;
+            while (scnr.hasNextLine()) {
+                line = scnr.nextLine();
+                if (line.length() == len) {
+                    result += line + "\n";
+                }
+            }
+            
+            scnr.close();
+        } catch (IOException ioe) {
+            
         }
         return result;
     }
@@ -70,6 +90,16 @@ public class PasswordHacker {
             FileWriter fw = new FileWriter("./PersonalPasswordDataList/" + "personalPasswordPossibilities_" + word + "_" + word2 + ".txt");
             PrintWriter pw = new PrintWriter(fw);
             pw.append(combinationsStrings(word, word2));
+            pw.close();
+        } catch (IOException ioe){
+            System.out.println("File not found.");
+        }
+        try {
+            FileWriter fw = new FileWriter("./PersonalPasswordDataList/" + "personalPasswordPossibilities_" + word + "_" + word2 + "_updated.txt");
+            PrintWriter pw = new PrintWriter(fw);
+            for (int i = 0; i < word.length() + word2.length(); i++) {
+                pw.append(readFile("./PersonalPasswordDataList/" + "personalPasswordPossibilities_" + word + "_" + word2, i));
+            }
             pw.close();
         } catch (IOException ioe){
             System.out.println("File not found.");
